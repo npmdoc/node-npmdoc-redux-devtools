@@ -1,0 +1,866 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/gaearon/redux-devtools">redux-devtools (v3.3.2)</a>
+</h1>
+<h4>Redux DevTools with hot reloading and time travel</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-devtools">module redux-devtools</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-devtools.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.createDevTools">
+            function <span class="apidocSignatureSpan">redux-devtools.</span>createDevTools
+            <span class="apidocSignatureSpan">(children)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.instrument">
+            function <span class="apidocSignatureSpan">redux-devtools.</span>instrument
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.persistState">
+            function <span class="apidocSignatureSpan">redux-devtools.</span>persistState
+            <span class="apidocSignatureSpan">(sessionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-devtools.</span>ActionCreators</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">redux-devtools.</span>ActionTypes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-devtools.ActionCreators">module redux-devtools.ActionCreators</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.commit">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>commit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.importState">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>importState
+            <span class="apidocSignatureSpan">(nextLiftedState, noRecompute)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.jumpToAction">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>jumpToAction
+            <span class="apidocSignatureSpan">(actionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.jumpToState">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>jumpToState
+            <span class="apidocSignatureSpan">(index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.lockChanges">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>lockChanges
+            <span class="apidocSignatureSpan">(status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.pauseRecording">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>pauseRecording
+            <span class="apidocSignatureSpan">(status)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.performAction">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>performAction
+            <span class="apidocSignatureSpan">(action)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.reorderAction">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>reorderAction
+            <span class="apidocSignatureSpan">(actionId, beforeActionId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.reset">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.rollback">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>rollback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.setActionsActive">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>setActionsActive
+            <span class="apidocSignatureSpan">(start, end)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.sweep">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>sweep
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.ActionCreators.toggleAction">
+            function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>toggleAction
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-devtools.createDevTools">module redux-devtools.createDevTools</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-devtools.createDevTools.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.createDevTools.default">
+            function <span class="apidocSignatureSpan">redux-devtools.createDevTools.</span>default
+            <span class="apidocSignatureSpan">(children)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.redux-devtools.persistState">module redux-devtools.persistState</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">redux-devtools.persistState.</span>__esModule</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.redux-devtools.persistState.default">
+            function <span class="apidocSignatureSpan">redux-devtools.persistState.</span>default
+            <span class="apidocSignatureSpan">(sessionId)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-devtools" id="apidoc.module.redux-devtools">module redux-devtools</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.createDevTools" id="apidoc.element.redux-devtools.createDevTools">
+        function <span class="apidocSignatureSpan">redux-devtools.</span>createDevTools
+        <span class="apidocSignatureSpan">(children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDevTools(children) {
+  var _class, _temp;
+
+  var monitorElement = _react.Children.only(children);
+  var monitorProps = monitorElement.props;
+  var Monitor = monitorElement.type;
+  var ConnectedMonitor = (0, _reactRedux.connect)(function (state) {
+    return state;
+  })(Monitor);
+
+  return _temp = _class = function (_Component) {
+    _inherits(DevTools, _Component);
+
+    function DevTools(props, context) {
+      _classCallCheck(this, DevTools);
+
+      var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+
+      if (!props.store &amp;&amp; !context.store) {
+        console.error('Redux DevTools could not render. You must pass the Redux store ' + 'to &lt;DevTools&gt; either as a "store" prop
+ or by wrapping it in a ' + '&lt;Provider store={store}&gt;.');
+        return _possibleConstructorReturn(_this);
+      }
+
+      if (context.store) {
+        _this.liftedStore = context.store.liftedStore;
+      } else {
+        _this.liftedStore = props.store.liftedStore;
+      }
+
+      if (!_this.liftedStore) {
+        console.error('Redux DevTools could not render. Did you forget to include ' + 'DevTools.instrument() in your store enhancer
+ chain before ' + 'using createStore()?');
+      }
+      return _this;
+    }
+
+    DevTools.prototype.render = function render() {
+      if (!this.liftedStore) {
+        return null;
+      }
+
+      return _react2.default.createElement(ConnectedMonitor, _extends({}, monitorProps, {
+        store: this.liftedStore }));
+    };
+
+    return DevTools;
+  }(_react.Component), _class.contextTypes = {
+    store: _react.PropTypes.object
+  }, _class.propTypes = {
+    store: _react.PropTypes.object
+  }, _class.instrument = function (options) {
+    return (0, _reduxDevtoolsInstrument2.default)(function (state, action) {
+      return Monitor.update(monitorProps, state, action);
+    }, options);
+  }, _temp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.instrument" id="apidoc.element.redux-devtools.instrument">
+        function <span class="apidocSignatureSpan">redux-devtools.</span>instrument
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function instrument() {
+  var monitorReducer = arguments.length &lt;= 0 || arguments[0] === undefined ? function () {
+    return null;
+  } : arguments[0];
+  var options = arguments.length &lt;= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+<span class="apidocCodeCommentSpan">  /* eslint-disable no-eq-null */
+</span>  if (options.maxAge != null &amp;&amp; options.maxAge &lt; 2) {
+    /* eslint-enable */
+    throw new Error('DevTools.instrument({ maxAge }) option, if specified, ' + 'may not be less than 2.');
+  }
+
+  return function (createStore) {
+    return function (reducer, initialState, enhancer) {
+
+      function liftReducer(r) {
+        if (typeof r !== 'function') {
+          if (r &amp;&amp; typeof r.default === 'function') {
+            throw new Error('Expected the reducer to be a function. ' + 'Instead got an object with a "default" field. ' + 'Did
+you pass a module instead of the default export? ' + 'Try passing require(...).default instead.');
+          }
+          throw new Error('Expected the reducer to be a function.');
+        }
+        return liftReducerWith(r, initialState, monitorReducer, options);
+      }
+
+      var liftedStore = createStore(liftReducer(reducer), enhancer);
+      if (liftedStore.liftedStore) {
+        throw new Error('DevTools instrumentation should not be applied more than once. ' + 'Check your store configuration.');
+      }
+
+      return unliftStore(liftedStore, liftReducer);
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Browser Extension
+
+If you donâ€™t want to bother with installing Redux DevTools and integrating it into your project, consider using [Redux DevTools
+Extension](https://github.com/zalmoxisus/redux-devtools-extension) for Chrome and Firefox. It provides access to the most popular
+ monitors, is easy to configure to filter actions, and doesnâ€™t require installing any packages.
+
+### Setup Instructions
+
+Read the installation [walkthrough](./docs/Walkthrough.md) for integration instructions and usage examples (`&lt;DevTools&gt;
+;` component, `DevTools.<span class="apidocCodeKeywordSpan">instrument</span>()`, exclude from production builds, gotchas).
+
+### Running Examples
+
+Clone the project:
+
+```
+git clone https://github.com/gaearon/redux-devtools.git
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.persistState" id="apidoc.element.redux-devtools.persistState">
+        function <span class="apidocSignatureSpan">redux-devtools.</span>persistState
+        <span class="apidocSignatureSpan">(sessionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function persistState(sessionId) {
+  var deserializeState = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : _identity2.default;
+  var deserializeAction = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : _identity2.default;
+
+  if (!sessionId) {
+    return function (next) {
+      return function () {
+        return next.apply(undefined, arguments);
+      };
+    };
+  }
+
+  function deserialize(state) {
+    return _extends({}, state, {
+      actionsById: (0, _mapValues2.default)(state.actionsById, function (liftedAction) {
+        return _extends({}, liftedAction, {
+          action: deserializeAction(liftedAction.action)
+        });
+      }),
+      committedState: deserializeState(state.committedState),
+      computedStates: state.computedStates.map(function (computedState) {
+        return _extends({}, computedState, {
+          state: deserializeState(computedState.state)
+        });
+      })
+    });
+  }
+
+  return function (next) {
+    return function (reducer, initialState, enhancer) {
+      var key = 'redux-dev-session-' + sessionId;
+
+      var finalInitialState = void 0;
+      try {
+        var json = localStorage.getItem(key);
+        if (json) {
+          finalInitialState = deserialize(JSON.parse(json)) || initialState;
+          next(reducer, initialState);
+        }
+      } catch (e) {
+        console.warn('Could not read debug session from localStorage:', e);
+        try {
+          localStorage.removeItem(key);
+        } finally {
+          finalInitialState = undefined;
+        }
+      }
+
+      var store = next(reducer, finalInitialState, enhancer);
+
+      return _extends({}, store, {
+        dispatch: function dispatch(action) {
+          store.dispatch(action);
+
+          try {
+            localStorage.setItem(key, JSON.stringify(store.getState()));
+          } catch (e) {
+            console.warn('Could not write debug session to localStorage:', e);
+          }
+
+          return action;
+        }
+      });
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-devtools.ActionCreators" id="apidoc.module.redux-devtools.ActionCreators">module redux-devtools.ActionCreators</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.commit" id="apidoc.element.redux-devtools.ActionCreators.commit">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>commit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function commit() {
+  return { type: ActionTypes.COMMIT, timestamp: Date.now() };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.importState" id="apidoc.element.redux-devtools.ActionCreators.importState">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>importState
+        <span class="apidocSignatureSpan">(nextLiftedState, noRecompute)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function importState(nextLiftedState, noRecompute) {
+  return { type: ActionTypes.IMPORT_STATE, nextLiftedState: nextLiftedState, noRecompute: noRecompute };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.jumpToAction" id="apidoc.element.redux-devtools.ActionCreators.jumpToAction">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>jumpToAction
+        <span class="apidocSignatureSpan">(actionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function jumpToAction(actionId) {
+  return { type: ActionTypes.JUMP_TO_ACTION, actionId: actionId };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.jumpToState" id="apidoc.element.redux-devtools.ActionCreators.jumpToState">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>jumpToState
+        <span class="apidocSignatureSpan">(index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function jumpToState(index) {
+  return { type: ActionTypes.JUMP_TO_STATE, index: index };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.lockChanges" id="apidoc.element.redux-devtools.ActionCreators.lockChanges">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>lockChanges
+        <span class="apidocSignatureSpan">(status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lockChanges(status) {
+  return { type: ActionTypes.LOCK_CHANGES, status: status };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.pauseRecording" id="apidoc.element.redux-devtools.ActionCreators.pauseRecording">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>pauseRecording
+        <span class="apidocSignatureSpan">(status)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pauseRecording(status) {
+  return { type: ActionTypes.PAUSE_RECORDING, status: status };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.performAction" id="apidoc.element.redux-devtools.ActionCreators.performAction">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>performAction
+        <span class="apidocSignatureSpan">(action)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function performAction(action) {
+  if (!(0, _isPlainObject2.default)(action)) {
+    throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+  }
+
+  if (typeof action.type === 'undefined') {
+    throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+  }
+
+  return { type: ActionTypes.PERFORM_ACTION, action: action, timestamp: Date.now() };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.reorderAction" id="apidoc.element.redux-devtools.ActionCreators.reorderAction">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>reorderAction
+        <span class="apidocSignatureSpan">(actionId, beforeActionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reorderAction(actionId, beforeActionId) {
+  return { type: ActionTypes.REORDER_ACTION, actionId: actionId, beforeActionId: beforeActionId };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.reset" id="apidoc.element.redux-devtools.ActionCreators.reset">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reset() {
+  return { type: ActionTypes.RESET, timestamp: Date.now() };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.rollback" id="apidoc.element.redux-devtools.ActionCreators.rollback">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>rollback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rollback() {
+  return { type: ActionTypes.ROLLBACK, timestamp: Date.now() };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.setActionsActive" id="apidoc.element.redux-devtools.ActionCreators.setActionsActive">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>setActionsActive
+        <span class="apidocSignatureSpan">(start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setActionsActive(start, end) {
+  var active = arguments.length &lt;= 2 || arguments[2] === undefined ? true : arguments[2];
+
+  return { type: ActionTypes.SET_ACTIONS_ACTIVE, start: start, end: end, active: active };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.sweep" id="apidoc.element.redux-devtools.ActionCreators.sweep">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>sweep
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sweep() {
+  return { type: ActionTypes.SWEEP };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.ActionCreators.toggleAction" id="apidoc.element.redux-devtools.ActionCreators.toggleAction">
+        function <span class="apidocSignatureSpan">redux-devtools.ActionCreators.</span>toggleAction
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toggleAction(id) {
+  return { type: ActionTypes.TOGGLE_ACTION, id: id };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-devtools.createDevTools" id="apidoc.module.redux-devtools.createDevTools">module redux-devtools.createDevTools</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.createDevTools.default" id="apidoc.element.redux-devtools.createDevTools.default">
+        function <span class="apidocSignatureSpan">redux-devtools.createDevTools.</span>default
+        <span class="apidocSignatureSpan">(children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDevTools(children) {
+  var _class, _temp;
+
+  var monitorElement = _react.Children.only(children);
+  var monitorProps = monitorElement.props;
+  var Monitor = monitorElement.type;
+  var ConnectedMonitor = (0, _reactRedux.connect)(function (state) {
+    return state;
+  })(Monitor);
+
+  return _temp = _class = function (_Component) {
+    _inherits(DevTools, _Component);
+
+    function DevTools(props, context) {
+      _classCallCheck(this, DevTools);
+
+      var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+
+      if (!props.store &amp;&amp; !context.store) {
+        console.error('Redux DevTools could not render. You must pass the Redux store ' + 'to &lt;DevTools&gt; either as a "store" prop
+ or by wrapping it in a ' + '&lt;Provider store={store}&gt;.');
+        return _possibleConstructorReturn(_this);
+      }
+
+      if (context.store) {
+        _this.liftedStore = context.store.liftedStore;
+      } else {
+        _this.liftedStore = props.store.liftedStore;
+      }
+
+      if (!_this.liftedStore) {
+        console.error('Redux DevTools could not render. Did you forget to include ' + 'DevTools.instrument() in your store enhancer
+ chain before ' + 'using createStore()?');
+      }
+      return _this;
+    }
+
+    DevTools.prototype.render = function render() {
+      if (!this.liftedStore) {
+        return null;
+      }
+
+      return _react2.default.createElement(ConnectedMonitor, _extends({}, monitorProps, {
+        store: this.liftedStore }));
+    };
+
+    return DevTools;
+  }(_react.Component), _class.contextTypes = {
+    store: _react.PropTypes.object
+  }, _class.propTypes = {
+    store: _react.PropTypes.object
+  }, _class.instrument = function (options) {
+    return (0, _reduxDevtoolsInstrument2.default)(function (state, action) {
+      return Monitor.update(monitorProps, state, action);
+    }, options);
+  }, _temp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.redux-devtools.persistState" id="apidoc.module.redux-devtools.persistState">module redux-devtools.persistState</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.redux-devtools.persistState.default" id="apidoc.element.redux-devtools.persistState.default">
+        function <span class="apidocSignatureSpan">redux-devtools.persistState.</span>default
+        <span class="apidocSignatureSpan">(sessionId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function persistState(sessionId) {
+  var deserializeState = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : _identity2.default;
+  var deserializeAction = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : _identity2.default;
+
+  if (!sessionId) {
+    return function (next) {
+      return function () {
+        return next.apply(undefined, arguments);
+      };
+    };
+  }
+
+  function deserialize(state) {
+    return _extends({}, state, {
+      actionsById: (0, _mapValues2.default)(state.actionsById, function (liftedAction) {
+        return _extends({}, liftedAction, {
+          action: deserializeAction(liftedAction.action)
+        });
+      }),
+      committedState: deserializeState(state.committedState),
+      computedStates: state.computedStates.map(function (computedState) {
+        return _extends({}, computedState, {
+          state: deserializeState(computedState.state)
+        });
+      })
+    });
+  }
+
+  return function (next) {
+    return function (reducer, initialState, enhancer) {
+      var key = 'redux-dev-session-' + sessionId;
+
+      var finalInitialState = void 0;
+      try {
+        var json = localStorage.getItem(key);
+        if (json) {
+          finalInitialState = deserialize(JSON.parse(json)) || initialState;
+          next(reducer, initialState);
+        }
+      } catch (e) {
+        console.warn('Could not read debug session from localStorage:', e);
+        try {
+          localStorage.removeItem(key);
+        } finally {
+          finalInitialState = undefined;
+        }
+      }
+
+      var store = next(reducer, finalInitialState, enhancer);
+
+      return _extends({}, store, {
+        dispatch: function dispatch(action) {
+          store.dispatch(action);
+
+          try {
+            localStorage.setItem(key, JSON.stringify(store.getState()));
+          } catch (e) {
+            console.warn('Could not write debug session to localStorage:', e);
+          }
+
+          return action;
+        }
+      });
+    };
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
