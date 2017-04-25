@@ -1,4 +1,7 @@
-# api documentation for  [redux-devtools (v3.3.2)](https://github.com/gaearon/redux-devtools)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux-devtools.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux-devtools) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux-devtools.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux-devtools)
+# npmdoc-redux-devtools
+
+#### basic api documentation for  [redux-devtools (v3.3.2)](https://github.com/gaearon/redux-devtools)  [![npm package](https://img.shields.io/npm/v/npmdoc-redux-devtools.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-redux-devtools) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-redux-devtools.svg)](https://travis-ci.org/npmdoc/node-npmdoc-redux-devtools)
+
 #### Redux DevTools with hot reloading and time travel
 
 [![NPM](https://nodei.co/npm/redux-devtools.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/redux-devtools)
@@ -104,7 +107,8 @@
         "test:cov": "babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --recursive",
         "test:watch": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register --recursive --watch"
     },
-    "version": "3.3.2"
+    "version": "3.3.2",
+    "bin": {}
 }
 ```
 
